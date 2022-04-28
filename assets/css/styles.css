@@ -8,9 +8,14 @@
 }
 
 /* colores */
+
+/*:root{
+    --first-color: #45a29e;
+    --second-color: #1f2833;
+}*/
 :root{
-    --first-color: #4070f4;
-    --second-color: #0e2431;
+    --first-color: #cda547;
+    --second-color: #32525d;
 }
 
 /* fuente */
@@ -216,8 +221,8 @@ img{
 }
 .home--img{
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 30px;
+    bottom: 50px;
     width: 295px;
 }
 
@@ -411,7 +416,7 @@ img{
     }
     .home--img{
         width: 457px;
-        bottom: 15%;
+        bottom: 0%;
     }
 
     .about--container{
