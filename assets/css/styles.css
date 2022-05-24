@@ -328,6 +328,8 @@ img{
     margin-top: var(--mb-2);
     margin-bottom: var(--mb-4);
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 .filter-btn{
     display: inline-block;
@@ -336,11 +338,11 @@ img{
     outline: none;
     border: none;
     cursor: pointer;
-    font-size: .85rem;
+    font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: .4px;
-    margin-left: 1.3rem;
     font-family: var(--body-font);
+    padding-bottom: 1rem;
 }
 .filter-btn .mixitup-control-active{
     color: var(--second-color);
@@ -490,6 +492,12 @@ img{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2,1fr);
         column-gap: 2rem;
+    }
+    .filter-btns{
+        display: contents;
+    }
+    .filter-btn{
+        padding-bottom: 2.5rem;
     }    
 }
 
