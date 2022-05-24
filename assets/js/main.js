@@ -59,10 +59,13 @@ sr.reveal('.work--img',{interval: 200})
 sr.reveal('.contact--data',{interval: 200})
 
 
+// work mix buttons
 
-
-
-
-
-
-
+let mixer = mixitup(".work--container",  {
+    selectors: {
+        target: '.work--img'
+    },
+    animation: {
+        duration: 450,
+    }
+});

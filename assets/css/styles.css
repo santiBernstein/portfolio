@@ -321,6 +321,30 @@ img{
 .work--container{
     row-gap: 2rem;
 }
+.filter-btns{
+    position: relative;
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    margin-top: var(--mb-2);
+    margin-bottom: var(--mb-4);
+    text-align: center;
+}
+.filter-btn{
+    display: inline-block;
+    color: var(--first-color);
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    margin-left: 1.3rem;
+    font-family: var(--body-font);
+}
+.filter-btn .mixitup-control-active{
+    color: var(--second-color);
+}
 .work--img{
     box-shadow: 0 4px 25px rgba(14,36,49,.15);
     border-radius: .5rem;
