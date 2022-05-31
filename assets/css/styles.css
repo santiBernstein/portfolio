@@ -330,6 +330,7 @@ img{
     text-align: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
 }
 .filter-btn{
     display: inline-block;
@@ -343,6 +344,7 @@ img{
     letter-spacing: .4px;
     font-family: var(--body-font);
     padding-bottom: 1rem;
+    max-width: max-content;
 }
 .filter-btn .mixitup-control-active{
     color: var(--second-color);
