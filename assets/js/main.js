@@ -73,13 +73,30 @@ let mixer = mixitup(".work--container",  {
 
 // dark mode toggle
 const toggleSwitch = document.querySelector('input[type=checkbox]');
+const toggleIcon = document.getElementById('toggle-icon');
+
+//light mode styles
+function lightMode (){
+    toggleIcon.children[0].textContent = 'Light Mode';
+    toggleIcon.children[1].classList.remove('bxs-moon');
+    toggleIcon.children[1].classList.add('bxs-sun');
+}
+
+//dark mode styles
+function darkMode (){
+    toggleIcon.children[0].textContent = 'Dark Mode';
+    toggleIcon.children[1].classList.remove('bxs-sun');
+    toggleIcon.children[1].classList.add('bxs-moon');
+}
 
 //switch theme dynamically
 function switchTheme(event){
     if(event.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
+        darkMode();          
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
+        lightMode();
     }
 }
 

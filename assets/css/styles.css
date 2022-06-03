@@ -17,6 +17,7 @@
     --first-color: #cda547;
     --second-color: #32525d;
     --first-background-color: #fff;
+    --second-background-color: #fff;
 }
 
 /* fuente */
@@ -55,10 +56,12 @@
 
 /*dark mode */
 [data-theme="dark"] {
-    --first-color: rgb(150, 65, 255);
-    --second-color: #03dac5;
-    --first-background-color: #121212;
+    --first-color: #ECDBBA;
+    --second-color: #C84B31;
+    --first-background-color: #191919;
+    --second-background-color: #2D4263;
 }
+
 /* Dark Mode Toggle */
 .theme-switch-wrapper {
     display: flex;
@@ -237,10 +240,11 @@ img{
 }
 .nav--link{
     position: relative;
-    color: #fff;
+    color: var(--first-background-color);
 }
 .nav--link:hover{
     position: relative;
+    color: var(--first-color);
 }
 .nav--link:hover::after{
     position: absolute;
@@ -322,6 +326,7 @@ img{
 }
 .button:hover{
     box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
+    color: var(--second-color);
 }
 
 /* about */
@@ -359,6 +364,7 @@ img{
     justify-content: space-between;
     align-items: center;
     position: relative;
+    background-color: var(--second-background-color);
     font-weight: var(--font-semi);
     padding: .5rem 1rem;
     margin-bottom: var(--mb-4);
@@ -487,7 +493,7 @@ img{
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: var(--first-background-color);
+    background-color: var(--second-background-color);
     font-weight: var(--font-semi);
     padding: .5rem 1rem;
     margin-bottom: var(--mb-1);
@@ -501,7 +507,7 @@ img{
 /*footer*/
 .footer{
     background-color: var(--second-color);
-    color: #fff;
+    color: var(--first-color);
     text-align: center;
     font-weight: var(--font-semi);
     padding: 2rem 0;
