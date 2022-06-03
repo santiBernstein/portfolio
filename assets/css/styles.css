@@ -16,6 +16,7 @@
 :root{
     --first-color: #cda547;
     --second-color: #32525d;
+    --first-background-color: #fff;
 }
 
 /* fuente */
@@ -49,8 +50,90 @@
     --z-back: -10;
     --z-normal: 1;
     --z-tooltip: 10;
-    --z-fixed: 100;
+    --z-fixed: 101;
 }
+
+/*dark mode */
+[data-theme="dark"] {
+    --first-color: rgb(150, 65, 255);
+    --second-color: #03dac5;
+    --first-background-color: #121212;
+}
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+    position: fixed;
+    right: 15px;
+    top: 65px;
+  }
+  
+  .theme-switch-wrapper span {
+    font-size: 0.6rem;
+  }
+  
+  .toggle-text {
+    position: relative;
+    top: -4px;
+    right: 5px;
+    color: var(--second-color);
+  }
+  
+  .theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 50px;
+  }
+  
+  .theme-switch input {
+    display: none;
+  }
+  
+  .slider {
+    background: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+  }
+  
+  .slider::before {
+    background: #fff;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 16px;
+  }
+  
+  input:checked + .slider {
+    background: var(--first-color);
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round::before {
+    border-radius: 50%;
+  }
+  .sol {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+
 
 /* base */
 *,::before,::after{
@@ -60,6 +143,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
+    background-color: var(--first-background-color);
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
@@ -123,12 +207,13 @@ img{
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: #fff;
+    background-color: var(--first-background-color);
     box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
 
 /* nav */
 .nav{
+    background-color: var(--first-background-color);
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -402,6 +487,7 @@ img{
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: var(--first-background-color);
     font-weight: var(--font-semi);
     padding: .5rem 1rem;
     margin-bottom: var(--mb-1);
@@ -429,6 +515,9 @@ img{
 @media screen and (min-width: 768px){
     body{
         margin: 0;        
+    }
+    .theme-switch-wrapper{
+        top: 100px;
     }
     .section{
         padding-top: 4rem;
