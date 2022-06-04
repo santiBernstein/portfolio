@@ -32,7 +32,7 @@ const sr = ScrollReveal({
     origin: 'top',
     distance: '80px',
     duration: 2000,
-    reset: true
+    reset: false,
 })
 
 // sr home //
@@ -78,8 +78,8 @@ const toggleIcon = document.getElementById('toggle-icon');
 //light mode styles
 function toggleDarklightMode (isDark){
     toggleIcon.children[0].textContent = isDark ? 'Dark Mode' : 'Light Mode';
-    isDark ? toggleIcon.children[1].classList.replace('bxs-moon', 'bxs-sun') :
-    toggleIcon.children[1].classList.replace('bxs-sun', 'bxs-moon');
+    isDark ? toggleIcon.children[1].classList.replace('bxs-sun', 'bxs-moon') :
+    toggleIcon.children[1].classList.replace('bxs-moon', 'bxs-sun');
 }
 
 //switch theme dynamically
