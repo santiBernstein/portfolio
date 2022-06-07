@@ -259,10 +259,41 @@ img{
     color: var(--second-color);
 }
 .nav--toggle{
-    color: var(--second-color);
     font-size: 1.5rem;
-    cursor: pointer;
 }
+/* --- Menu Bars ------------------------------------ */
+
+.menu-bars {
+    right: 2rem;
+    z-index: 10;
+    display: inline;
+    cursor: pointer;
+  }
+  
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: var(--second-color);
+    margin: 8px 0;
+    transition: 0.4s;
+    font-size: 1.5rem;
+  }
+/* Rotate first bar */
+.change .bar1 {
+    transform: rotate(-45deg) translate(-7px, 8px);
+  }
+  
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+  }
+  
+/* Rotate last bar */
+.change .bar3 {
+    transform: rotate(45deg) translate(-6px, -8px);
+  }  
 
 /* active menu */
 .active::after{
@@ -411,6 +442,7 @@ img{
 }
 .work--container{
     row-gap: 2rem;
+    overflow: hidden;
 }
 .filter-btns{
     position: relative;
@@ -548,7 +580,7 @@ img{
         margin-left: var(--mb-6);
         margin-bottom: 0;
     }
-    .nav--toggle{
+    .menu-bars{
         display: none;
     }
     .nav--link{
